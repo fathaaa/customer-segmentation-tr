@@ -1,0 +1,6 @@
+# Local PKB merge files and outputs
+/Merge PKB/
+
+# Python cache
+__pycache__/
+*.py[cod]
