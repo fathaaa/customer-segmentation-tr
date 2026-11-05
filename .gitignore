@@ -1,6 +1,8 @@
-# Local PKB merge files and outputs
-/Merge PKB/
+# Output hasil olahan
+*.csv
+_rusak/
+Merge PKB/
 
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
