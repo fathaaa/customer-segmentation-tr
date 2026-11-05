@@ -48,3 +48,22 @@ lewat lookup by nomor PKB (kolom WO).
 
 gabung.py (gabung + lookup) | perbaiki.py (perbaiki file korup)
 cek.py (persen tidak ketemu per bulan) | cek2.py (cek ke belum_lengkap)
+
+## Tahap 2
+
+- tahap2.py sudah dijalankan.
+- Output: PKB Details 2025_tahap2.csv dan PKB Details 2026_tahap2.csv.
+- Kolom baru: Alamat_Asli, Status_Alamat.
+- Ringkasan jumlah baris per Status_Alamat:
+  - 2025:
+    - Lengkap: 1.240.321
+    - Tidak teridentifikasi: 369.588
+    - Tidak ada data alamat: 170.415
+    - Parsial: 23.186
+    - Periksa konflik sumber vs alamat: 64
+  - 2026:
+    - Lengkap: 945.338
+    - Tidak teridentifikasi: 308.769
+    - Tidak ada data alamat: 127.161
+    - Parsial: 19.897
+    - Periksa konflik sumber vs alamat: 424
