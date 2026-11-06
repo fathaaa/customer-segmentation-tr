@@ -1,5 +1,7 @@
 # Output hasil olahan
 *.csv
+data/
+*.parquet
 _rusak/
 Merge PKB/
 

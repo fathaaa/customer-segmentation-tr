@@ -67,3 +67,23 @@ cek.py (persen tidak ketemu per bulan) | cek2.py (cek ke belum_lengkap)
     - Tidak ada data alamat: 127.161
     - Parsial: 19.897
     - Periksa konflik sumber vs alamat: 424
+
+## Referensi
+
+- BU = cabang (lihat `data/ref_cabang.csv`).
+- Free pasti: `Service_Category` yang mengandung TWC, SSC, SBI, atau RTJ.
+- Free bersyarat: SBE gratis hanya jika kendaraan masih dalam masa T-Care. Data T-Care belum tersedia, jadi SBE tidak bisa dipastikan free atau paid. Dalam analisis, laporkan SBE sebagai kelompok terpisah "SBE (status T-Care belum diketahui)".
+- Paid: GR, BP, OC, dan lainnya.
+- Status: dikonfirmasi mentor via chat 6 Nov 2026; detail T-Care masih menunggu data.
+- #16 dan #32 berstatus "Sebagian": dapat dikerjakan dengan SBE sebagai kelompok terpisah.
+- Data yang diminta ke mentor: data T-Care atau tanggal penjualan untuk memastikan status SBE.
+- Rentang data 2025-01-02 sampai 2026-10-12; pakai 2026-10-12 sebagai tanggal cut-off.
+- Chassis = pengganti Customer ID.
+
+## pkb_master
+
+- `data/pkb_master.parquet`: 1 baris per WO, 514.280 WO unik, dibuat oleh `scripts/bangun_master.py`.
+- Kolom: WO, BU, Bulan_PKB (YYMM), Tanggal_PKB, Service_Category, Total_Revenue, Revenue_Product, Revenue_Jasa, Jumlah_Baris, Kecamatan, Kota/Kabupaten, Provinsi, Status_Alamat, Chassis.
+- 33.649 WO tidak punya Chassis.
+- `Total_Revenue` disebut "nilai transaksi". Servis free (SBI, TWC/SSC) tetap punya nilai > 0, jadi belum tentu uang yang dibayar customer (menunggu konfirmasi mentor).
+- Aturan analisis: baca HANYA `data/pkb_master.parquet` (bukan CSV besar), cetak hasil ringkas (maks 15 baris), satu analisis = satu script di `scripts/` + satu file `.md` di `analysis/`.
