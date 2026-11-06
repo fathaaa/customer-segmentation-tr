@@ -43,6 +43,7 @@ lewat lookup by nomor PKB (kolom WO).
 - Jangan menimpa CSV yang sudah ada, tulis ke file output baru.
 - Jangan commit .csv atau .xlsx.
 - Cetak maksimal 5 baris contoh.
+- Jangan pernah mencetak WO, Chassis, atau alamat asli. Kalau perlu contoh, samarkan (misal `101***0035`). Hanya cetak angka agregat.
 
 ## Script
 
