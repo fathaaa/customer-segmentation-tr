@@ -4,6 +4,7 @@ data/
 *.parquet
 _rusak/
 Merge PKB/
+Check.xlsx
 
 # Python
 __pycache__/
